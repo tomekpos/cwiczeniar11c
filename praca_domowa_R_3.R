@@ -17,12 +17,12 @@ liczbaWierszyPlik<-lengthOfFile("konta.csv",FALSE)
 #(---------------------------FUNKCJE--------------------------------)
 
 #_______________funkcją łącząca się z bazą
-connectMe<-function(typ=Postgres(),dbname="novmkhcn",host="dumbo.db.elephantsql.com",user="novmkhcn",pass="et1E528u1PV3DQ7vCnigxQM0zveulKox"){
+connectMe<-function(typ=Postgres(),dbname="novmkhcn",host="dumbo.db.elephantsql.com",user="novmkhcn"){
   con<- dbConnect(typ,
                   dbname=dbname,
                   host=host,
                   user=user,
-                  password=pass #askForPassword("database password")
+                  password=askForPassword("database password")
   )
 }
 
